@@ -19,7 +19,6 @@ EXPOSE 3100
 # 7. 애플리케이션 실행
 CMD [ "node", "server.js" ]
 
-
 # docker build -t online-coding-test-storage:latest .
 
-# docker run -d -p 3100:3100 -v vol-onCoTe-storage:/usr/src/app/upload --name online-coding-test-storage online-coding-test-storage:latest
+# docker run --rm -d -p 3100:3100 -v vol-onCoTe-storage:/usr/src/app/exam --name oncote-storage online-coding-test-storage:latest

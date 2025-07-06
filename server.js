@@ -14,10 +14,11 @@ const customFileFilter = (req, file, cb) => {
 const upload = multer({
     storage: multer.diskStorage({
         destination: (req, file, cb) => {
-            cb(null, 'upload/')
+            cb(null, 'exam/')
         },
         filename: (req, file, cb) => {
-            cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);
+            // cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);
+            cb(null, `loginId-${Date.now()}${path.extname(file.originalname)}`)
         },
 
     }),
@@ -27,7 +28,16 @@ const upload = multer({
 
 // curl -F "file=@file" localhost:3000/upload
 app.post('/upload', upload.any(), (req, res) => {
-    res.send('success')
+
+    console.log(Object.keys(req))
+    console.log(req.files)
+    // console.log(res)
+    // res.send('success')
+    res.json({
+        id: 'loginId',
+        fileName: req.files[0].filename,
+        ext: path.extname(req.files[0].filename),
+    })
 })
 
 app.get('/', (req, res) => {
