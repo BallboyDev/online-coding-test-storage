@@ -1,0 +1,12 @@
+# FROM openjdk:17-jdk-slim
+FROM gcc:12.4.0-bookworm
+
+CMD ["sh"]
+
+# 이미지 생성
+# docker build -t container_test:latest -f Dockerfile_test .
+
+# 컨테이너 실행
+# docker run -it --network net-onCoTe -v vol-onCoTe-storage:/exam container_test:latest 
+
+# docker build -t container_test:latest -f Dockerfile_test . && docker run -it --rm --network net-onCoTe -v vol-onCoTe-storage:/exam container_test:latest 

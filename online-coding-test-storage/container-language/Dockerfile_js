@@ -10,7 +10,7 @@ WORKDIR /exam
 # COPY ./test.js .
 
 ENTRYPOINT ["node"]
-CMD ["test.js"]
+CMD ["javascript.js"]
 
 # 이미지 생성
 # docker build -t container_js:latest -f Dockerfile_js .
