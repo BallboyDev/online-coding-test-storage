@@ -36,7 +36,7 @@ app.post('/upload', upload.any(), (req, res) => {
     res.json({
         id: 'loginId',
         fileName: req.files[0].filename,
-        ext: path.extname(req.files[0].filename),
+        ext: path.extname(req.files[0].filename).replace('.', ''),
     })
 })
 

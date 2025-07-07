@@ -1,0 +1,19 @@
+# 베이스 이미지 설정
+FROM node:22-alpine
+
+# 저장소 볼륨 설정
+VOLUME ["/exam"]
+
+# 코드 실행
+WORKDIR /exam
+
+# COPY ./test.js .
+
+ENTRYPOINT ["node"]
+CMD ["test.js"]
+
+# 이미지 생성
+# docker build -t container_js:latest -f Dockerfile_js .
+
+# 컨테이너 실행
+# docker run --rm --network net-onCoTe -v vol-onCoTe-storage:/exam container_js:latest 
