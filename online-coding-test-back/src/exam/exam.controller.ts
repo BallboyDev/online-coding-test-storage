@@ -23,10 +23,11 @@ export class ExamController {
 
         console.log(id, fileName, ext, msg)
 
-        const executeResult = await this.containerService.runContainer(`container_${ext}:latest`, fileName || 'test.js')
+        // const executeResult = await this.containerService.runContainer(`container_${ext}:latest`, fileName || 'test.js')
 
-        console.log(executeResult)
+        // console.log(executeResult)
 
-        return { id: id, fileName: fileName, msg: executeResult.message }
+        // return { id: id, fileName: fileName, msg: executeResult?.message || 'test' }
+        return { id: id, fileName: fileName, msg: 'test' }
     }
 }

@@ -51,10 +51,8 @@ export class ContainerService {
                         "vol-onCoTe-storage:/exam"
                     ]
                 }
-
             }
             const container = await this.docker.createContainer(options);
-
 
             const stream = await container.attach({
                 stream: true,
@@ -66,9 +64,6 @@ export class ContainerService {
 
             await container.start();
             await container.wait();
-
-            // return output;
-            console.log(output)
 
             return {
                 id: container.id,

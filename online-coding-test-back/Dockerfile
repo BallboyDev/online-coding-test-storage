@@ -41,3 +41,5 @@ CMD ["npm", "run", "start:prod"]
 
 # Docker 컨테이너 실행
 # docker run --rm -d -p 3000:3000 --network net-onCoTe -v /var/run/docker.sock:/var/run/docker.sock:ro --name oncote-backend online-coding-test-back:latest
+
+# docker build -t online-coding-test-back:latest . && docker run --rm -d -p 3000:3000 --network net-onCoTe -v /var/run/docker.sock:/var/run/docker.sock:ro --name oncote-backend online-coding-test-back:latest
