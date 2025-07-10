@@ -26,3 +26,5 @@ CMD [ "node", "server.js" ]
 # docker run --rm -d -p 3100:3100 --network net-onCoTe -v vol-onCoTe-storage:/usr/src/app/exam --name oncote-storage online-coding-test-storage:latest
 
 # docker build -t online-coding-test-storage:latest . &&  docker run --rm -d -p 3100:3100 --network net-onCoTe -v vol-onCoTe-storage:/usr/src/app/exam --name oncote-storage online-coding-test-storage:latest
+
+# docker build -t online-coding-test-storage:latest . &&  docker run --rm -d  --network net-onCoTe -v vol-onCoTe-storage:/usr/src/app/exam --name oncote-storage online-coding-test-storage:latest

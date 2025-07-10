@@ -29,8 +29,8 @@ const upload = multer({
 // curl -F "file=@file" localhost:3000/upload
 app.post('/upload', upload.any(), (req, res) => {
 
-    console.log(Object.keys(req))
-    console.log(req.files)
+    // console.log(Object.keys(req))
+    // console.log(req.files)
     // console.log(res)
     // res.send('success')
     res.json({
